@@ -1,0 +1,422 @@
+$primaryColor: #043B56;
+$secondaryColor: #653a8e;
+$aaa: #6e1bbd;
+.MuiAppBar-colorPrimary {
+    //background-color: $primaryColor !important;
+    ///color: black !important;
+}
+
+.recycle-badge {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    
+    border-radius: 50%;
+    svg {
+        //padding: 0.5rem;
+        width: 100%;
+        max-height: 200px;
+    }
+    .recycle-number {
+        font-size: 2rem;
+        position: absolute;
+        right: 45%;
+        bottom: 50%;
+    }
+}
+
+.MuiButton-label {
+    a {
+        color: $primaryColor;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+.MuiGrid-root {
+    .grown {    
+        @media (min-width: 900px) {
+        //order: 1;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-basis: 100% !important;
+        transition: max-width 0.3s linear, flex-basis 0.3s linear;
+        .MuiCardActions-spacing {
+            justify-content: space-around;   
+        }
+        .small-grid {
+            display: flex;
+            transition: display 0.3s linear;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .MuiCardHeader-root {
+                order: 2;
+                width: 45%;
+                transition: width 0.3s linear;
+                //margin-top: -8rem;
+                color: black;
+                font-weight: bold;
+                
+                .MuiCardHeader-content {
+                    //background-color: lightgray;
+                    //padding-left: 2rem;
+                    span {
+                        &:first-of-type {
+                            font-size: 2rem;
+                            font-weight: bold;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+            
+            .MuiExpansionPanelSummary-content {
+                font-weight: bold;
+            }
+            .MuiExpansionPanelSummary-content.Mui-expanded {
+                font-weight: bold !important;
+            }
+        }
+        .MuiCardMedia-root {
+            height: 350px;
+            width: 100%;
+            order: 1;
+
+            transition: height 0.5s linear;
+            
+            background-position: center;
+            background-size: cover;
+            padding-top: 0;
+            margin-top: 1rem;
+        }
+        }
+    }
+    .shrunk {
+        transition: width 0.3s linear, max-width 0.3s linear, flex-basis 0.3s linear;
+        //order: 2;
+        .MuiCardHeader-root {
+            height: 80px;
+        }
+        .hide-for-shrunk {
+            display: none;
+        }
+        @media (max-width: 900px) {
+            .MuiCardContent-root {
+                display: none;
+            }
+        }
+    }
+}
+
+.MuiCardHeader-root {
+    flex-wrap: wrap;
+    .MuiCardHeader-action {
+        order: 1;
+        width: 100%;
+    }
+    .MuiCardHeader-content {
+        order: 2;
+    }
+}
+.MuiCardContent-root {
+    padding-bottom: 0 !important;
+}
+
+.makeStyles-healthList-366 {
+    padding-left: 1rem;
+}
+
+.circle-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .MuiCircularProgress-root {
+        width:80px !important;
+        height: 80px !important;
+    }
+}
+.chartcard {
+    height: 400px;
+
+    .MuiCardHeader-root {
+        text-align: center;
+    }
+
+    svg {
+
+        position: absolute; 
+        left: -10%;       
+        top: -5rem;
+        @media (max-width: 900px) {
+            left: -2%;
+        }
+    }
+    .MuiCardContent-root {
+        margin-top: -11rem;
+    }
+}
+
+.h4-centered {
+    margin: 0;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+.MuiChip-root {
+    margin-right: 0.2rem !important;
+}
+
+.snackbar-link {
+    color: darkOrange !important;
+}
+
+
+.dashboard-paper {
+    padding: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    h3 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+}
+
+.clearIcon {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+.MuiGrid-root {
+    &.invisible {
+        display: none;
+        transition: display 0.5s linear;
+    }
+}
+
+.searchItemChip {
+    background-color: $aaa !important;    
+    color: white !important;
+    font-weight: 700;
+    svg {
+        color: white;
+    }
+}
+.badgeListItem {
+    display: block !important;
+    width: 200px !important;
+    height: 200px !important;
+    .MuiDivider-root {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .opacity {
+        opacity: 50%;
+        width: 100%;
+        height: 80%;
+    }
+    h3 {
+        text-align: center;
+        margin:0;
+        text-transform: capitalize;
+        &:first-of-type {
+            margin-top: 0.5rem;
+        }
+    }
+    p {
+        
+        margin: 0;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+    .badge {
+        width:100%;
+        height: 80%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: opacity 0.5s linear;
+        &.next {
+            opacity: 60%;
+        }
+        &.recycle0 {
+            background-image: url('./images/badges/0-recycle.svg');    
+        }
+        &.recycle1 {    
+            background-image: url('./images/badges/1-recycle.svg');    
+        }
+        &.recycle2 {    
+            background-image: url('./images/badges/2-recycle.svg');    
+        }
+        &.recycle3 {    
+            background-image: url('./images/badges/3-recycle.svg');    
+        }
+
+        &.co20 {
+            background-image: url('./images/badges/0-star.svg');    
+        }
+        &.co21 {
+            background-image: url('./images/badges/1-star.svg');        
+        }
+        &.co22 {
+            background-image: url('./images/badges/2-star.svg');    
+        }
+        &.co23 {
+            background-image: url('./images/badges/3-star.svg');    
+        }
+        &.co24 {
+            background-image: url('./images/badges/4-star.svg');    
+        }
+        &.co25 {
+            background-image: url('./images/badges/5-star.svg');    
+            
+        }
+        &.dollar0 {
+            background-image: url('./images/badges/0-dollar.svg');    
+        }
+        &.dollar1 {
+            background-image: url('./images/badges/1-dollar.svg');    
+        }
+        &.dollar2 {
+            background-image: url('./images/badges/2-dollar.svg');    
+        }
+        &.dollar3 {
+            background-image: url('./images/badges/3-dollar.svg');    
+        }
+        &.dollar4 {
+            background-image: url('./images/badges/3-dollar.svg');    
+        }
+        &.dollar5 {
+            background-image: url('./images/badges/3-dollar.svg');    
+        }
+    }
+}
+
+.MuiAppBar-colorPrimary {
+    background-color: unset !important;
+    box-shadow: none !important;
+    color: $primaryColor !important;
+}
+
+.chipPurple {
+    &.selected {
+        background-color: $primaryColor !important;
+        color: white !important;
+
+        
+    }
+    &.unselected {
+        border: 1px solid $primaryColor !important;
+        background-color: white !important;
+        color: $primaryColor !important;
+        
+    }
+}
+
+.logo-container {
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('./images/logo.png');
+    height: 175px;
+    width: 175px;
+    position: relative;
+    padding-bottom: 1rem;
+    @media (min-width: 950px) {
+        height: 250px; 
+        width: 250px;    
+    }
+    order: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.MuiContainer-root.MuiContainer-maxWidthLg {
+    max-width: 1100px;
+}
+
+.healtChip {
+    svg {
+        color: $primaryColor;
+    }
+}
+.grown {
+    .bold-me {
+        font-weight: bold;
+    }
+
+    
+}
+.recipeimage {
+    @media(max-width: 900px) {
+        height: 30vh !important;
+        padding-top:50px !important;
+    }
+    
+}
+
+.makeStyles-matchItem-373, .healthChip.MuiChip-root {
+    color: $secondaryColor !important;
+    border: 2px solid $secondaryColor !important;
+    background-color: white;
+
+    svg {
+        color: $secondaryColor !important;
+    }
+}
+
+.stack-for-mobile {
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        display: flex !important;
+    }
+}
+
+.branding {
+    h1 {    
+        order: 2;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        color: $primaryColor;
+    }
+    h3 {
+        color: $primaryColor;
+        width: 100%;
+        white-space: nowrap;   
+        text-align: center;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.spinner { 
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.healthChip {
+    .MuiChip-deletable {
+        color: $secondaryColor !important;
+        border: 2px solid $secondaryColor !important;
+        background-color: white;
+
+        svg {
+            color: $secondaryColor !important;
+        }
+    }
+}
